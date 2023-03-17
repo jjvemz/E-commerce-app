@@ -16,16 +16,16 @@ class User extends Model {
 
 User.init(
   {
-    id: {
+    id:{
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    userName: {
+    userName:{
       type: DataTypes.STRING,
     },
-    password: {
+    password:{
       type: DataTypes.STRING,
       set(value) {
         this.setPassword(value);
