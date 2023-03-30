@@ -79,4 +79,37 @@ const register = async (req, res) => {
     }
   };
 
-module.exports = { login, logout, register };
+  const updateUser= async(req, res)=> {
+    const { id } = req.params;
+    const { userName, password, age, address } = req.body;
+    try {
+      const user = await User.findByPk(id);
+      if (user) {
+        await user.update({ userName, password, age, address });
+        res.status(200).json(user);
+      } else {
+        res.status(404).json({ message: 'User not found' });
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: 'Server Error' });
+    }
+  };
+
+  const deleteUser= async(req, res)=> {
+    const { id } = req.params;
+    try {
+      const user = await User.findByPk(id);
+      if (user) {
+        await user.destroy();
+        res.status(204).send();
+      } else {
+        res.status(404).json({ message: 'User not found' });
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: 'Server Error' });
+    }
+  };
+
+module.exports = { login, logout, register, updateUser,deleteUser };
