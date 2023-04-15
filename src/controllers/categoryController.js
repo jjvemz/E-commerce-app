@@ -30,9 +30,6 @@ const getCategoryById = (req, res) => {
 };
 
 
-
-
-
 const createCategory = (req, res) => {
   Category.create(req.body)
     .then((category) => {
