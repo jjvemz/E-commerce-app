@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.js --trace-warnings",
-    "test": "jest --watchAll --verbose --detectOpenHandles --no-watcher"
+    "test": "jest --detectOpenHandles"
   },
   "author": "Juan José Vergara",
   "license": "ISC",
