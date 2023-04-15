@@ -16,7 +16,7 @@ describe("Category API GET", () => {
 });
 
 describe("Category API POST", () => {
-  /* const newCategory = {
+  const newCategory = {
     category_name: "some category",
   };
 
@@ -28,7 +28,7 @@ describe("Category API POST", () => {
     expect(response.statusCode).toBe(200);
   });
 
- it("Should return a JSON object for for the POST request of category", async () => {
+ /* it("Should return a JSON object for for the POST request of category", async () => {
     const response = await request(app)
       .post("localhost:4000/api/v1/categories")
       .set("content-type", "application/json")
@@ -37,7 +37,7 @@ describe("Category API POST", () => {
     expect(response.headers["content-type"]).toEqual(
       expect.stringContaining("json")
     );
-  });
+  });*/
 
   it("Should return the id of the category", async () =>{
     const response = await request(app)
@@ -61,7 +61,7 @@ describe("Category API POST", () => {
         if (err) return done(err);
         done();
       });
-  });*/
+  });
   
   /*it("responds with a 500 when an error occurs", (done) => {
   request(app)
