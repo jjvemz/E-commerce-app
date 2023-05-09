@@ -19,8 +19,8 @@ jobs:
         context: .
         push: true
         tags: |
-          username/repository:latest
-          username/repository:${{ github.sha }}
+          juanjo233/e-commerce-backend-app:latest
+          juanjo233/e-commerce-backend-app:${{ github.sha }}
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
