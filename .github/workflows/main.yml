@@ -60,6 +60,6 @@ jobs:
       - name: Pull Docker image
         run: docker pull juanjo233/e-commerce-backend-app:latest
       - name: Tag Docker image for GitHub Packages
-        run: docker tag juanjo233/e-commerce-backend-app:latest docker.pkg.github.com/username/repository/repository:latest
+        run: docker tag juanjo233/e-commerce-backend-app:latest docker.pkg.github.com/juanjo233/e-commerce-backend-app/e-commerce-backend-app:latest
       - name: Push Docker image to GitHub Packages
-        run: docker push docker.pkg.github.com/username/repository/repository:latest
+        run: docker push docker.pkg.github.com/juanjo233/e-commerce-backend-app/e-commerce-backend-app:latest
