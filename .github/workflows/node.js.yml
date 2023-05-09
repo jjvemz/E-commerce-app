@@ -25,7 +25,7 @@ jobs:
         context: .
         push: true
         tags: |
-          username/repository:latest
-          username/repository:${{ github.sha }}
+          juanjo233/e-commerce-backend-app:latest
+          juanjo233/e-commerce-backend-app:${{ github.sha }}
       env:
         DOCKER_AUTH_CONFIG: '{"auths":{"docker.io":{"username": "${{ secrets.DOCKER_USERNAME }}", "password": "${{ secrets.DOCKER_PASSWORD }}", "email": "not@used.com"}}}'
